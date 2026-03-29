@@ -9,7 +9,7 @@ st.set_page_config(page_title="Dashboard Centro de Innovación", layout="wide")
 
 # 2. CONEXIÓN A DATOS (Google Sheets)
 # Reemplaza con tu URL real en el Secrets de Streamlit o aquí
-URL_SHEET = "https://docs.google.com/spreadsheets/d/10mc_pk6QHWwia1njPo6uftI7eleHGZmdhgUW6yvJZ20/edit?gid=0#gid=0"
+url = st.secrets["connections"]["gsheets"]["spreadsheet"]
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 # 3. SEGURIDAD
